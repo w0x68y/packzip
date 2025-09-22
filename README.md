@@ -149,14 +149,6 @@ packzip/
 - **目标平台**：Windows
 - **依赖包**：标准库（archive/zip, encoding/base64, os/exec 等）
 
-## 许可证
-
-本项目采用开源许可证，具体条款请查看 LICENSE 文件。
-
-## 贡献
-
-欢迎提交 Issue 和 Pull Request 来改进这个项目。
-
 ## 更新日志
 
 - **v1.0.0**：初始版本，支持基本的自解压功能
