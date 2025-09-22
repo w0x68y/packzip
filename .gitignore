@@ -1,0 +1,42 @@
+# 编译生成的可执行文件
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Go 编译输出
+pack.exe
+output.exe
+mypackage.exe
+installer.exe
+
+# 临时文件
+*.tmp
+*.temp
+temp/
+tmp/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE 文件
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 日志文件
+*.log
+
+# 资源文件（如果不需要版本控制）
+
+
+# 测试文件
+test_*.exe
+test_*.bat
+
+# 备份文件
+*.bak
+*.backup

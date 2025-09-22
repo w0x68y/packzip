@@ -39,6 +39,48 @@ go build -o pack.exe main.go
 go build -ldflags="-H windowsgui" -o pack.exe main.go
 ```
 
+### 添加自定义图标
+
+如果需要为生成的可执行文件添加自定义图标，可以使用 `rsrc` 工具：
+
+#### 1. 安装 rsrc 工具
+```bash
+go install github.com/akavel/rsrc@latest
+```
+
+#### 2. 准备图标文件
+- 准备一个 `.ico` 格式的图标文件（如 `icon.ico`）
+- 建议使用 256x256 像素的图标以获得最佳效果
+
+#### 3. 生成资源文件
+```bash
+rsrc -ico icon.ico -o resource.syso
+```
+
+#### 4. 编译程序
+编译程序时，Go 编译器会自动识别同目录下的 `.syso` 文件：
+```bash
+go build -o yourprogram.exe
+```
+
+#### 完整示例
+```bash
+# 1. 安装工具
+go install github.com/akavel/rsrc@latest
+
+# 2. 生成资源文件（假设有 icon.ico 文件）
+rsrc -ico icon.ico -o resource.syso
+
+# 3. 编译程序
+go build -ldflags="-H windowsgui" -o pack.exe main.go
+```
+
+#### 注意事项
+- `.syso` 文件必须与 `main.go` 在同一目录下
+- 编译完成后可以删除 `.syso` 文件
+- 图标文件必须是 `.ico` 格式
+- 建议图标尺寸为 16x16, 32x32, 48x48, 64x64, 128x128, 256x256 像素
+
 ## 使用方法
 
 ### 基本语法
