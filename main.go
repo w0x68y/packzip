@@ -187,6 +187,9 @@ func extractAndRunFiles() {
 	}
 
 	time.Sleep(3 * time.Second)
+
+	// 清理临时目录
+	os.RemoveAll(tempDir)
 }
 
 func runFile(filePath string) {
